@@ -215,7 +215,7 @@ def main():
     # Get data for each ticker
     for ticker in tickers:
         df = get_candles(start="2020-01-01 00:00:00", interval2="1", market=ticker)
-        df.to_csv(f"backtests/mark01/data/{ticker}.csv")
+        df.to_csv(f"backtests/01_mark01/data/{ticker}.csv")
 
     # Process and merge data
     merged_df = make_merged_df(tickers)
@@ -223,7 +223,7 @@ def main():
     merged_df = time_utc_start_to_end(merged_df, "2020-01-01", "2024-12-31")
 
     # Save final result
-    merged_df.to_csv("backtests/mark01/data/merged_df.csv")
+    merged_df.to_csv("backtests/01_mark01/data/merged_df.csv")
     print("\nFinal merged dataframe:")
     print(merged_df)
 

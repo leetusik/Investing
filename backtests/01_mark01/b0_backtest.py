@@ -415,7 +415,7 @@ def run_backtest(
 
 def main():
     # Load data
-    df = load_data("backtests/mark01/data/merged_df.csv")
+    df = load_data("backtests/01_mark01/data/merged_df.csv")
     # df = df.tail(10000)
     df = df.dropna(subset=["KRW-BTC_close", "KRW-ETH_close", "KRW-XRP_close"])
     df = df.reset_index(drop=True)  # Reset index after loading
@@ -470,7 +470,7 @@ def main():
         )
 
         # Save with comprehensive filename
-        result_df.to_csv(f"backtests/mark01/results/backtest_{param_str}.csv")
+        result_df.to_csv(f"backtests/01_mark01/results/backtest_{param_str}.csv")
 
         results.append(
             {
