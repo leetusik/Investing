@@ -33,4 +33,10 @@
 
 
 	
-		
+# features candidate
+## Universal
+	상대강도
+
+## Coins
+	
+## Stocks
